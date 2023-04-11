@@ -62,7 +62,7 @@ public class Stn {
 		
 //		double std = Math.pow(var, 0.5);
 		double std = Math.sqrt(var); 
-		System.out.printf("최대값과 최소값을 제외한 나머지 데이터의 표준편차 : %f\n", std);
+		System.out.printf("최대값과 최소값을 제외한 나머지 데이터의 표준편차 : %f\n", std); //0.816497
 		
 	}
 
