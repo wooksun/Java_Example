@@ -25,8 +25,6 @@ public class BubbleSoftEarlyStopTest {
 //					값 교환이 이루어지면 flag 변수에 1을 저장한다. (boolean시 1이 아닌, false)
 //					isFlag = flase;
 					flag = 1;
-					
-					
 				}
 			} // 회전종료
 			
