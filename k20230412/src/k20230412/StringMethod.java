@@ -1,5 +1,6 @@
 package k20230412;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StringMethod {
@@ -59,6 +60,50 @@ public class StringMethod {
 		str = "itTjoeunit"; //012345678
 		System.out.println(str.indexOf("it")); //0
 		System.out.println(str.lastIndexOf("it")); //8
+		System.out.println("==========================================");
+		
+//		indexOf(), lastIndexOf() 메소드의 인수로 지정한 문자열이 없으면 -1을 리턴한다.
+//		indexOf(), lastIndexOf() 메소드의 실행결과가 0이상이면 인수로 지정된 문자열이 포함되었다는 의미로 사용.
+		System.out.println(str.indexOf("It")); //-1
+		System.out.println(str.lastIndexOf("IT"));  //-1
+		System.out.println("==========================================");
+		
+		
+//		contains() : 문자열에 인수로 지정한 문자열이 포함되어 있으면 true, 없으면 false를 리턴
+		str = "itTjoeunit"; 
+		System.out.println(str.contains("it")); //true
+		System.out.println(str.contains("IT")); //false
+		System.out.println("==========================================");
+		
+		
+//		split("구분자") : 
+		str = "abc 123 가나다";
+		System.out.println(str.split(" ")); //[Ljava.lang.String;@6d78f375
+		System.out.println(str.split(" ").length); //3
+		System.out.println(Arrays.toString(str.split(" "))); //[abc, 123, 가나다]
+		System.out.println(str.split(" ")[0]); //abc
+		System.out.println("==========================================");
+		
+		
+//		replace(a,b) : 문자열의 모든 a를 b로 치환한다.		
+		str = "itTjoeunit"; 
+		System.out.println(str.replace("i", "아이")); //아이tTjoeun아이t
+		System.out.println("==========================================");
+		
+		
+//		repeat() : 문자열을 인수로 지정한 개수만큼 반복한다.
+		str = "8304223185600";
+		System.out.println(str.substring(0, 7) + "*".repeat(6)); //8304223******
+		System.out.println("==========================================");
+
+		
+		str = "123-45678-12345";
+		System.out.println(str.substring(0, 4) + "*****" + str.substring(9, 15)); 
+		System.out.println(str.substring(0, 4) + "*".repeat(5) + str.substring(9, 15)); 
+		
+		
+		
+		
 		
 	}
 
