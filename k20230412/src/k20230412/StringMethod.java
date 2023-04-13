@@ -97,13 +97,46 @@ public class StringMethod {
 		System.out.println("==========================================");
 
 		
+//		내가 짠 코드
 		str = "123-45678-12345";
 		System.out.println(str.substring(0, 4) + "*****" + str.substring(9, 15)); 
 		System.out.println(str.substring(0, 4) + "*".repeat(5) + str.substring(9, 15)); 
+		System.out.println("==========================================");
 		
 		
+//		강사님코드
+		str = "123-45678-12345";
+//		준비작업
+		System.out.println("앞쪽 '-'의 index : " + str.indexOf("-")); //3
+		System.out.println("뒤쪽 '-'의 index : " + str.lastIndexOf("-")); //9
+//		String code = str.substring(4, 9); //45678
+		String code = str.substring(str.indexOf("-") + 1, str.lastIndexOf("-")); //45678 -> 숫자가 줄거나 늘어나도, - 사이의 값 출력 
+		System.out.println(code);
+		System.out.println("==========================================");
+		
+//		본작업 1방법 substring()
+		String newCode =  str.substring(0, str.indexOf("-") + 1); //123-
+//		for(int i=0; i<code.length();i++) { //123-*****
+//			newCode += "*";
+//		}
+//		newCode += str.substring(str.lastIndexOf("-")); //123-*****-12345
+//		System.out.println(newCode);
+//		System.out.println("==========================================");
+		
+
+//		본작업 2방법 repeat()
+		newCode += "*".repeat(code.length());
+		newCode += str.substring(str.lastIndexOf("-")); //123-*****-12345
+		System.out.println(newCode);
+//		System.out.println("==========================================");
 		
 		
+//		본작업 3방법 split()
+		String[] newCode2 = str.split("-"); //'-' 제거
+		System.out.println(Arrays.toString(newCode2)); //[123, 45678, 12345]
+		System.out.printf("%s-%s-%s\n",newCode2[0], "*".repeat(newCode2[1].length()), newCode2[2]); //123-*****-12345
+		newCode = String.format("%s-%s-%s",newCode2[0], "*".repeat(newCode2[1].length()), newCode2[2]); //123-*****-12345
+		System.out.println(newCode);
 		
 	}
 
