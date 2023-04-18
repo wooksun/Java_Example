@@ -19,7 +19,8 @@ public class BookVO { // 도서정보 1건을 기억하는 클래스
 //	일반 변수를 선언하면 변수에는 어떤값이 들어있는지 모르지만(쓰레기), 클래스에서 선언하는 필드는 별도로 초기화를 하지 않아도 
 //	숫자는 0, 문자는 공백, boolean은 false, 클래스로 만든 객체(참조변수)는 null로 자동초기화된다.
 //★	this. => 필드 (멤버) / this.를 안쓰면 지역변수
-
+	
+//	기억장소들
 	private String title = ""; // 도서명 / 접근권한지정자만 다를 뿐 변수 만드는것과 같다.
 	private String author = ""; // 저자
 	private String publisher = ""; // 출판사
